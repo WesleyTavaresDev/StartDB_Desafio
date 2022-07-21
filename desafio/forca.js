@@ -2,7 +2,7 @@ class Forca {
 
   constructor (palavraSecreta = "") {
     this.vida = 6;
-    this.palavraSecreta = palavraSecreta;
+    this.palavraSecreta =  new Array(...palavraSecreta);
     this.palavra = new Array(palavraSecreta.length).fill('_');
     this.letrasChutadas = [];
   }
@@ -13,15 +13,11 @@ class Forca {
     {
         this.letrasChutadas.push(letra);
         
-        if(this.palavraSecreta.includes(letra))
+        if(this.chuteCorreto(letra))
         {
-          for(let i = 0; i < this.palavraSecreta.length; i++)
-          {
-            if(this.palavraSecreta[i] === letra)
-            {
-              this.palavra[i] = letra
-            }
-          }
+          this.palavraSecreta.forEach((l, i) => {
+            this.palavra[i] = l === letra ? letra : this.palavra[i];
+          }); 
         }
         else
           this.vida--;  
@@ -29,13 +25,17 @@ class Forca {
   }
 
 
+  chuteCorreto(chute) {
+    return this.palavraSecreta.includes(chute);
+  }
+
   letraValida(chute) {
     return chute.length === 1 && !this.letrasChutadas.includes(chute)
   }
 
 
   buscarEstado() {
-    if(this.palavra.join('') == this.palavraSecreta)
+    if(this.palavra.join('') == this.palavraSecreta.join(''))
       return "ganhou"
     else if(this.vida <= 0)
       return "perdeu"
