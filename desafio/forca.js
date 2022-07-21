@@ -14,16 +14,19 @@ class Forca {
         this.letrasChutadas.push(letra);
         
         if(this.chuteCorreto(letra))
-        {
-          this.palavraSecreta.forEach((l, i) => {
-            this.palavra[i] = l === letra ? letra : this.palavra[i];
-          }); 
-        }
+          this.aplicarChute(letra); 
+        
         else
           this.vida--;  
     }
   }
 
+
+  aplicarChute(letra) {
+    this.palavraSecreta.forEach((l, i) => {
+      this.palavra[i] = l === letra ? letra : this.palavra[i];
+    });
+  }
 
   chuteCorreto(chute) {
     return this.palavraSecreta.includes(chute);
