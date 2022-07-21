@@ -9,10 +9,8 @@ class Forca {
   
   chutar(letra) 
   {
-    if(letra.length === 1) 
+    if(this.letraValida(letra)) 
     {
-      if(!this.letrasChutadas.includes(letra))
-      {
         this.letrasChutadas.push(letra);
         
         if(this.palavraSecreta.includes(letra))
@@ -26,10 +24,15 @@ class Forca {
           }
         }
         else
-          this.vida--; 
-      }
+          this.vida--;  
     }
   }
+
+
+  letraValida(chute) {
+    return chute.length === 1 && !this.letrasChutadas.includes(chute)
+  }
+
 
   buscarEstado() {
     if(this.palavra.join('') == this.palavraSecreta)
