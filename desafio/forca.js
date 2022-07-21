@@ -12,18 +12,18 @@ class Forca {
     if(this.letraValida(letra)) 
     {
         this.letrasChutadas.push(letra);
-        this.chuteCorreto(letra) ? this.aplicarChute(letra) : this.vida--;
+
+        this.letraCorreta(letra) ? this.adicionarLetraNaPalavra(letra) : this.vida--;
     }
   }
 
-
-  aplicarChute(chute) {
+  adicionarLetraNaPalavra(chute) {
     this.palavraSecreta.forEach((l, i) => {
       this.palavra[i] = l === chute ? chute : this.palavra[i];
     });
   }
 
-  chuteCorreto(chute) {
+  letraCorreta(chute) {
     return this.palavraSecreta.includes(chute);
   }
 
