@@ -3,18 +3,14 @@
 
 # Propriedades:
     
-``` js
-palavraSecreta: Se refere a palavra que o jogador precisa descobrir para ganhar o jogo;
-```
-```js
-vida: A quantidade de chances (vidas) que o jogador tem. A cada erro essa variavel é diminuida;
-```
-```js
-palavra: Se refere a palavra constituida pelas letras acertadas do jogador. No lugar das letras ainda não encontradas é posto um traço( _ );
-```
-```js
-letras chutadas: Estrutura que recebe as letras já chutadas pelo jogador.
-```
+- palavraSecreta: Se refere a palavra que o jogador precisa descobrir para ganhar o jogo;
+
+- vida: A quantidade de chances (vidas) que o jogador tem. A cada erro essa variavel é diminuida;
+
+- palavra: Se refere a palavra constituida pelas letras acertadas do jogador. No lugar das letras ainda não encontradas é posto um traço( _ );
+
+- letras chutadas: Estrutura que recebe as letras já chutadas pelo jogador.
+
 # Métodos:
 
 ## **chutar(letra: string):** 
