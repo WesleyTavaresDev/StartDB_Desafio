@@ -16,7 +16,7 @@ class Forca {
     if(this.#letraValida(letra)) 
     {
       this.#letrasChutadas.push(letra);
-      this.#letraCorreta(letra) ? this.#adicionarLetraNaPalavra(letra) : this.vida--;
+      this.#letraCorreta(letra) ? this.#adicionarLetraNaPalavra(letra) : this.#vida--;
     }
   }
 
