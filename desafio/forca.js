@@ -13,10 +13,10 @@ class Forca {
   
   chutar(letra) 
   {
-    if(this.#letraValida(letra)) 
+    if(this.#éLetraValida(letra)) 
     {
       this.#letrasChutadas.push(letra);
-      this.#letraCorreta(letra) ? this.#adicionarLetraNaPalavra(letra) : this.#vida--;
+      this.#éLetraCorreta(letra) ? this.#adicionarLetraNaPalavra(letra) : this.#vida--;
     }
   }
 
@@ -45,11 +45,11 @@ class Forca {
     });
   }
 
-  #letraCorreta(chute) {
+  #éLetraCorreta(chute) {
     return this.#palavraSecreta.includes(chute);
   }
 
-  #letraValida(chute) {
+  #éLetraValida(chute) {
     return chute.length === 1 && !this.#letrasChutadas.includes(chute);
   }
 }
