@@ -16,7 +16,19 @@
 
 - *Recebe o chute (letra) do usuario e o processa.*
 
->### chutar é um método de alto nível, responsável por chamar métodos de níveis menores como
+>### chutar é um método de alto nível, responsável por chamar métodos de níveis menores
+
+## **buscarEstado():**
+
+- *Verifica o estado do jogo e retorna um estado (ganhou, perdeu ou aguardando chute)*
+
+## **buscarDadosDoJogo()**
+
+- *Retorna as condições que o jogo se encontra, retornando a vida e letras chutadas do jogador junto a como a palavra se encontra*;
+
+## **adicionarLetraNaPalavara:**
+
+- Responsável por adicionar a letra inserida pelo usuário no atributo palavra, caso a mesma estiver correta.
 
 ## *métodos de retorno booleano*
 
@@ -24,14 +36,4 @@
 
 - éLetraCorreta: responsável por verificar se o chute do usuário está correto;
 
-## *método sem retorno*
 
-- adicionarLetraNaPalavara: responsável por adicionar a letra inserida pelo usuário no atributo palavra, caso a mesma estiver correta.
-
-## **buscarEstado():**
-
-- *Verifica o estado do jogo e retorna um estado (ganhou, perdeu ou aguardando chute)*
-
-## **buscarDadosDOJogo()**
-
-- *Retorna as condições que o jogo se encontra, retornando a vida e letras chutadas do jogador junto a como a palavra se encontra*;
