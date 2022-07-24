@@ -27,7 +27,7 @@ class Forca {
     else if(this.#vida <= 0)
       return "perdeu";
 
-    else if(this.#palavra !== this.#palavraSecreta && this.#vida > 0)
+    else
       return "aguardando chute";
   }
 
